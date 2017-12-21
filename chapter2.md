@@ -125,11 +125,14 @@ while lines that it added are prefixed with `+`.
 <hr>
 
 You have been put in the `dental` directory.
-(We will now stop reminding you of this...)
 Use `git log` to see the hashes of recent commits,
 and then `git show` with the first few digits of a hash
 to look at the most recent commit.
 How many files did it change?
+
+Reminder:
+press the space bar to page down through `git log`'s output
+and `q` to quit the paged display.
 
 *** =instructions
 - None.

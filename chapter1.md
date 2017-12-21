@@ -455,7 +455,7 @@ Use one Git command to add the other changed file to the staging area.
 
 *** =hint3
 
-Use `git add` with the name of the file to be added.
+Use `git add` with the relative path to the file to be added.
 
 *** =sample_code3
 ```{shell}
