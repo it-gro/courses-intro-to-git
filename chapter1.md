@@ -377,8 +377,9 @@ with open('dental/data/northern.csv', 'a') as writer:
 with open('dental/data/eastern.csv', 'a') as writer:
     writer.write('2017-11-02,molar\n')
 repl = connect('bash')
+repl.run_command('git -C dental add data/northern.csv')
+repl.run_command('clear')
 repl.run_command('cd dental')
-repl.run_command('git add data/northern.csv')
 ```
 
 *** =type1: ConsoleExercise
@@ -388,10 +389,10 @@ repl.run_command('git add data/northern.csv')
 
 *** =instructions1
 
-You have been put in the `dental` repository,
-and `data/northern.csv` has been added to the staging area.
-Use `git diff` with `-r` and an argument to see how files differ from
-the last saved revision.
+You have been put in the `dental` repository.
+`data/eastern.csv` and `data/northern.csv` have been added to the staging area.
+Use `git diff` with `-r` and an argument to see how they differ from
+the last saved revisions.
 
 *** =hint1
 
@@ -560,8 +561,9 @@ Fehrenbach: "Dental Anatomy Coloring Book" (2e), 2013.
 with open('dental/report.txt', 'a') as writer:
     writer.write(append)
 repl = connect('bash')
+repl.run_command('git -C dental add report.txt')
+repl.run_command('clear')
 repl.run_command('cd dental')
-repl.run_command('git add report.txt')
 ```
 
 *** =type1: ConsoleExercise
@@ -757,8 +759,9 @@ Fehrenbach: "Dental Anatomy Coloring Book" (2e), 2013.
 with open('dental/report.txt', 'a') as writer:
     writer.write(append)
 repl = connect('bash')
+repl.run_command('git -C dental add report.txt')
+repl.run_command('clear')
 repl.run_command('cd dental')
-repl.run_command('git add report.txt')
 ```
 
 *** =type1: ConsoleExercise

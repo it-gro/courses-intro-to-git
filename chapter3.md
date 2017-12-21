@@ -108,10 +108,11 @@ Fehrenbach: "Dental Anatomy Coloring Book" (2e), 2013.
 with open('dental/data/northern.csv', 'a') as writer:
     writer.write('2017-11-01,bicuspid\n')
 repl = connect('bash')
-repl.run_command('cd dental')
-repl.run_command('git add data/northern.csv')
+repl.run_command('git -C dental add data/northern.csv')
 with open('dental/data/northern.csv', 'a') as writer:
     writer.write('2017-11-02,bicuspid\n')
+repl.run_command('clear')
+repl.run_command('cd dental')
 ```
 
 *** =type1: ConsoleExercise
@@ -203,8 +204,9 @@ with open('dental/data/northern.csv', 'a') as writer:
 with open('dental/data/eastern.csv', 'a') as writer:
     writer.write('2017-11-02,molar\n')
 repl = connect('bash')
+repl.run_command('git -C dental add data/*.csv')
+repl.run_command('clear')
 repl.run_command('cd dental')
-repl.run_command('git add data/*.csv')
 repl.run_command('git status')
 ```
 
@@ -265,8 +267,9 @@ with open('dental/data/northern.csv', 'a') as writer:
 with open('dental/data/eastern.csv', 'a') as writer:
     writer.write('2017-11-02,molar\n')
 repl = connect('bash')
+repl.run_command('git -C dental add data/*.csv')
+repl.run_command('clear')
 repl.run_command('cd dental')
-repl.run_command('git add data/*.csv')
 repl.run_command('git status')
 ```
 
@@ -455,8 +458,9 @@ with open('dental/data/eastern.csv', 'a') as writer:
 with open('dental/report.txt', 'a') as writer:
     writer.write('\n(Because funding is the most important part of any project.)\n')
 repl = connect('bash')
+repl.run_command('git -C dental add .')
+repl.run_command('clear')
 repl.run_command('cd dental')
-repl.run_command('git add dental')
 repl.run_command('git status')
 ```
 
